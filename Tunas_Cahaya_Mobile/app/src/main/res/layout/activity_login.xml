@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    tools:context=".Activites.LoginActivity">
+
+    <!--Awal Header-->
+    <include layout="@layout/appbar" />
+    <!--Akhir Header-->
+
+
+    <!--Awal TextView Selamat Datang-->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Selamat Datang di"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Tunas Cahaya Mobile"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Selamat Datang-->
+
+
+    <!--Awal TextView silakan login-->
+    <TextView
+        android:id="@+id/silahkan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:text="Silakan login dengan akun anda"
+        android:textColor="@color/blue1"
+        android:textSize="20dp"
+        android:textStyle="normal" />
+    <!--Akhir TextView silakan login-->
+
+
+    <!--Awal EditText Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray"
+        app:boxBackgroundColor="@color/white"
+        android:layout_below="@+id/silahkan"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp">
+
+        <EditText
+            android:id="@+id/emaillog"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Email-->
+
+
+    <!--Awal EditText Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/etPassword"
+        app:passwordToggleEnabled="true"
+        android:layout_below="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp"
+        app:startIconDrawable="@drawable/ic_pass"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray"
+        app:passwordToggleTint="@color/gray">
+        <EditText
+            android:id="@+id/passwordlog"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Password-->
+
+    <!--Awal Button Login-->
+    <Button
+        android:id="@+id/btnlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etPassword"
+        android:layout_marginHorizontal="85dp"
+        android:layout_marginTop="41dp"
+        android:background="@drawable/radius_btn"
+        android:fontFamily="@font/poppins"
+        android:onClick="onClick"
+        android:text="LOGIN"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <!--Akhir Button Login-->
+
+
+    <!--Awal LinearLayout Belum Punya Akun dan Register-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnlogin"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--Awal TextView Belum Punya Akun-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:fontFamily="@font/poppins"
+            android:text="Belum Punya Akun ?"
+            android:textColor="@color/black"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+        <!--Awal TextView Belum Punya Akun-->
+
+        <!--Awal TextView Register-->
+        <TextView
+            android:id="@+id/tvcreateaccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Register!"
+            android:textColor="@color/blue1"
+            android:textSize="13dp"
+            android:textStyle="bold" />
+        <!--Akhir TextView Register-->
+    </LinearLayout>
+    <!--Akhir LinearLayout Belum punya akun dan Register-->
+
+
+</RelativeLayout>

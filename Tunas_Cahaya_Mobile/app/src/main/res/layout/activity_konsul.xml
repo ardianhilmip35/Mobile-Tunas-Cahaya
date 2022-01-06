@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fitur.KonsulActivity">
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+
+    <!--Awal TextView Konsultasi-->
+    <TextView
+        android:id="@+id/txtkonsul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:text="Konsultasi"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Konsultasi-->
+
+
+    <!--Awal TextView Pemberitahuan-->
+    <!--Akhir TextView Pemberitahuan-->
+
+
+    <!--Awal LinearLayout Button Nohp-->
+    <TextView
+        android:id="@+id/txtpemberitahuan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtkonsul"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="9dp"
+        android:fontFamily="@font/poppins"
+        android:justificationMode="inter_word"
+        android:paddingHorizontal="5dp"
+        android:text="Jika anda ingin melakukan pemesanan jasa konstruktor, anda bisa menghubungi nomor di bawah ini! "
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/btnwa"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_below="@id/txtpemberitahuan"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_editakun"
+        android:clickable="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/wa" />
+
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:clickable="true"
+            android:fontFamily="@font/poppins"
+            android:text="085236814716"
+            android:textColor="@color/white"
+            android:textSize="17dp" />
+
+    </LinearLayout>
+    <!--Awal LinearLayout Button Nohp-->
+
+
+    <!--Awal TextView Atau-->
+    <TextView
+        android:id="@+id/txtatau"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnwa"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/poppins"
+        android:paddingHorizontal="5dp"
+        android:text="Atau"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <!--Awal TextView Atau-->
+
+
+    <!--Awal TextView saran alamat-->
+    <TextView
+        android:id="@+id/txtsaranalamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtatau"
+        android:layout_marginHorizontal="5dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:paddingHorizontal="5dp"
+        android:text="Anda bisa mengunjungi alamat perusahaan di bawah ini :"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView saran alamat-->
+
+
+    <!--Awal TextView alamat-->
+    <TextView
+        android:id="@+id/etAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtsaranalamat"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/borderhome"
+        android:fontFamily="@font/poppins"
+        android:gravity="center"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="30dp"
+        android:text="Jl. Slamet Riyadi RT. 004 RW. 011 Perum Bumi Central Permai Blok C-27 Kel. Baratan Kec. Patrang kabupaten Kab. Jember."
+        android:textColor="@color/black"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView alamat-->
+
+
+</RelativeLayout>

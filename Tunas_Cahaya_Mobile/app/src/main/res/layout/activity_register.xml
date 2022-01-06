@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".Activites.RegisterActivity">
+
+    <!--Awal Header-->
+    <include layout="@layout/appbar" />
+    <!--Akhir Header-->
+
+
+    <!--Awal TextView Daftar Akun-->
+    <TextView
+        android:id="@+id/tvDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="30dp"
+        android:fontFamily="@font/poppins"
+        android:text="Daftar Akun"
+        android:textAlignment="center"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Daftar Akun-->
+
+
+    <!--Awal EditText Nama Lengkap-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvDaftar"
+        app:startIconDrawable="@drawable/ic_name"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border"
+        android:fontFamily="@font/ptserif"
+        android:hint="Nama Lengkap"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
+        android:textSize="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Nama Lengkap-->
+
+
+    <!--Awal EditText Email-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nama"
+        app:startIconDrawable="@drawable/ic_email"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:hint="Email"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Email-->
+
+
+    <!--Awal EditText Nomer Telepon-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Nomerhp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Email"
+        app:startIconDrawable="@drawable/ic_phone"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+        <EditText
+            android:id="@+id/etNohp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:hint="Nomer Telepon"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Nomer Telepon-->
+
+
+    <!--Awal EditText Password-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Password"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nomerhp"
+        app:startIconDrawable="@drawable/ic_pass"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="17dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray"
+        app:passwordToggleTint="@color/gray">
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:hint="Password"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/gray"
+            android:textSize="18dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Password-->
+
+
+    <!--Awal Button Register-->
+    <Button
+        android:id="@+id/btnRegis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Password"
+        android:layout_marginHorizontal="85dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/radius_btn"
+        android:fontFamily="@font/poppins"
+        android:text="REGISTER"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <!--Akhir Button Register-->
+
+
+    <!--Awal Layout TextView Belum Punya Akun dan Register-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnRegis"
+        android:layout_marginTop="7dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <!--Awal TextView Belum Punya Akun-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:textSize="13dp"
+            android:text="Sudah Punya Akun ?"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/black"
+            android:textStyle="bold" />
+        <!--Akhir TextView Belum Punya Akun-->
+
+        <!--Awal TextView Register-->
+        <TextView
+            android:id="@+id/tvlogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login!"
+            android:textSize="13dp"
+            android:fontFamily="@font/poppins"
+            android:textColor="@color/blue1"
+            android:textStyle="bold" />
+        <!--Akhir TextView Register-->
+    </LinearLayout>
+    <!--Awal Layout TextView Belum Punya Akun dan Register-->
+</RelativeLayout>

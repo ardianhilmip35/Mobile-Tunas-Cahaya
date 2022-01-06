@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fitur.AboutActivity">
+
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+
+    <!--Awal TextView About-->
+    <TextView
+        android:id="@+id/txtabout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:text="About"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView About-->
+
+
+    <!--Awal RelativeLayout Untuk Isi About-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_below="@id/txtabout"
+        android:background="@color/blue1">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:justificationMode="inter_word"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="30dp"
+            android:text="@string/about"
+            android:textColor="@color/white"
+            android:textSize="15dp" />
+    </RelativeLayout>
+    <!--Akhir RelativeLayout Untuk Isi About-->
+</RelativeLayout>

@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".Activites.HomeActivity">
+
+    <!--Awal Header-->
+    <include layout="@layout/appbar" />
+    <!--Akhir Header-->
+
+
+    <!--Awal Background TextView Nama dan Pilih Layanan Yang Anda Inginkan dan Button Pengaturan-->
+    <RelativeLayout
+        android:id="@+id/secbar"
+        android:layout_width="match_parent"
+        android:layout_height="126dp"
+        android:layout_below="@+id/appbar"
+        android:background="@drawable/background">
+
+        <!--Awal LinearLayout dari TextView Nama dan ImageButton Settings-->
+        <LinearLayout
+            android:id="@+id/namaandbutton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="18dp"
+            android:gravity="left"
+            android:orientation="horizontal">
+
+
+            <!--Awal TextView Nama-->
+            <TextView
+                android:id="@+id/tvnama"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="nama"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+            <!--Akhir TextView Nama-->
+
+            <!--Awal ImageButton Settings-->
+            <ImageButton
+                android:id="@+id/btnsettings"
+                android:layout_width="35dp"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingBottom="4dp"
+                android:src="@drawable/settings" />
+            <!--Akhir ImageButton Settings-->
+        </LinearLayout>
+        <!--Akhir LinearLayout dari TextView Nama dan ImageButton Settings-->
+
+        <!--Awal TextView Pilih Layanan Yabg Anda Inginkan-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/namaandbutton"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/poppins"
+            android:text="Pilih layanan yang Anda inginkan"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="normal" />
+        <!--Akhir TextView Pilih Layanan Yabg Anda Inginkan-->
+    </RelativeLayout>
+    <!--Akhir Background TextView Nama dan Pilih Layanan Yang Anda Inginkan dan Button Pengaturan-->
+
+
+    <!--Awal RelativeLayout Untuk Tempat ImageButton Katalog, Pemesanan, About, Konsultasi-->
+    <RelativeLayout
+        android:id="@+id/btngroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secbar"
+        android:layout_marginTop="30dp">
+
+        <!--Awal Button Katalog-->
+        <ImageButton
+            android:id="@+id/btnkatalog"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginStart="55dp"
+            android:background="@drawable/borderhome"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:src="@drawable/catalog" />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnkatalog"
+            android:layout_alignStart="@+id/btnkatalog"
+            android:layout_marginTop="-35dp"
+            android:fontFamily="@font/poppins"
+            android:text="KATALOG"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <!--Akhir Button Katalog-->
+
+        <!--Awal Button Pemesanan-->
+        <ImageButton
+            android:id="@+id/btnpemesanan"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/borderhome"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:src="@drawable/order1" />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnpemesanan"
+            android:layout_alignEnd="@+id/btnpemesanan"
+            android:layout_marginTop="-35dp"
+            android:fontFamily="@font/poppins"
+            android:text="PEMESANAN"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <!--Akhir Button Pemesanan-->
+
+        <!--Awal Button About-->
+        <ImageButton
+            android:id="@+id/btnabout"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/btnkatalog"
+            android:layout_marginStart="55dp"
+            android:layout_marginTop="37dp"
+            android:background="@drawable/borderhome"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:src="@drawable/about" />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnabout"
+            android:layout_alignStart="@+id/btnabout"
+            android:layout_marginTop="-35dp"
+            android:fontFamily="@font/poppins"
+            android:text="ABOUT"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <!--Akhir Button About-->
+
+        <!--Awal Button Konsul-->
+        <ImageButton
+            android:id="@+id/btnkonsul"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_below="@id/btnkatalog"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="55dp"
+            android:background="@drawable/borderhome"
+            android:clickable="true"
+            android:paddingBottom="10dp"
+            android:src="@drawable/phone" />
+        <TextView
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btnkonsul"
+            android:layout_alignEnd="@id/btnkonsul"
+            android:layout_marginTop="-35dp"
+            android:fontFamily="@font/poppins"
+            android:text="KONSULTASI"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp"
+            android:textStyle="bold" />
+        <!--Akhir Button Konsul-->
+    </RelativeLayout>
+    <!--Akhir RelativeLayout Untuk Tempat ImageButton Katalog, Pemesanan, About, Konsultasi-->
+
+
+    <!--Awal RelativeLayout Notif-->
+
+    <TextView
+        android:id="@+id/notifkonsul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btngroup"
+        android:layout_marginHorizontal="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/notification"
+        android:fontFamily="@font/poppins"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="5dp"
+        android:textSize="12sp"
+        android:text="Ingin"
+        android:textColor="@color/white"
+        android:justificationMode="inter_word"/>
+    <!--Akhir RelativeLayout Notif-->
+
+</RelativeLayout>
