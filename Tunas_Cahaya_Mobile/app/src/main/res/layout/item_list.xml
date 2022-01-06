@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="130dp"
+    android:layout_height="250dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardElevation="4dp"
+    android:paddingHorizontal="6dp"
+    android:id="@+id/produk_card"
+    android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/blue2"
+            >
+            <TextView
+                android:id="@+id/tvkatalog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID Katalog"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tvdeskripsi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="deskripsi"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/tvgambar"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/namaimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/poppins"
+                android:text="nama"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:justificationMode="inter_word"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:id="@+id/txtAlamat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:fontFamily="@font/poppins"
+                android:text="alamat"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:justificationMode="inter_word"/>
+
+
+
+        </LinearLayout>
+</androidx.cardview.widget.CardView>

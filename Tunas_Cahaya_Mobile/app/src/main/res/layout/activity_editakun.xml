@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fitur.EditAkunActivity">
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+
+    <!--Awal TextView Edit Akun-->
+    <TextView
+        android:id="@+id/txteditakun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:text="Edit Akun"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Edit Akun-->
+
+
+    <!--Awal Text View Nama Lengkap-->
+    <TextView
+        android:id="@+id/txtNama"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txteditakun"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nama Lengkap"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+    <!--Akhir Text View Nama Lengkap-->
+
+
+    <!--Awal EditText Nama Lengkap-->
+    <EditText
+        android:id="@+id/etNama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNama"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/ptserif"
+        android:inputType="text"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    <!--Akhir EditText Nama Lengkap-->
+
+
+    <!--Awal TextView Email-->
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etNama"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/poppins"
+        android:text="Email"
+        android:textColor="@color/black"
+        android:textSize="15dp" />
+    <!--Akhir TextView Email-->
+
+
+    <!--Awal EditText Email-->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtEmail"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/ptserif"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    <!--Akhir EditText Email-->
+
+
+    <!--Awal TextView Nomer Telepon-->
+    <TextView
+        android:id="@+id/txtNohp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/etEmail"
+        android:fontFamily="@font/poppins"
+        android:text="Nomer Telepon"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:textSize="15dp"/>
+    <!--Akhir TextView Nomer Telepon-->
+
+
+    <!--Awal EditText Nomer Telepon-->
+    <EditText
+        android:id="@+id/etNohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtNohp"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/ptserif"
+        android:inputType="phone"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    <!--Akhir EditText Nomer Telepon-->
+
+
+<!--    &lt;!&ndash;Awal TextView Password&ndash;&gt;-->
+<!--    <TextView-->
+<!--        android:id="@+id/txtPassword"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_below="@+id/etNohp"-->
+<!--        android:fontFamily="@font/poppins"-->
+<!--        android:text="Password"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:layout_marginStart="30dp"-->
+<!--        android:textSize="15dp"/>-->
+<!--    &lt;!&ndash;Akhir TextView Password&ndash;&gt;-->
+
+
+<!--    &lt;!&ndash;Awal EditText Password&ndash;&gt;-->
+<!--    <EditText-->
+<!--        android:id="@+id/etPassword"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_below="@+id/txtPassword"-->
+<!--        android:layout_marginHorizontal="30dp"-->
+<!--        android:background="@drawable/bg_editakun"-->
+<!--        android:fontFamily="@font/ptserif"-->
+<!--        android:inputType="textPassword"-->
+<!--        android:minHeight="48dp"-->
+<!--        android:paddingStart="15dp"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="18dp" />-->
+<!--    &lt;!&ndash;Akhir EditText Password&ndash;&gt;-->
+
+
+    <!--Awal TextView Password-->
+    <TextView
+        android:id="@+id/txtAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/etNohp"
+        android:fontFamily="@font/poppins"
+        android:text="Alamat"
+        android:textColor="@color/black"
+        android:layout_marginStart="30dp"
+        android:textSize="15dp"/>
+    <!--Akhir TextView Password-->
+
+
+    <!--Awal EditText Password-->
+    <EditText
+        android:id="@+id/etAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtAlamat"
+        android:layout_marginHorizontal="30dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/ptserif"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    <!--Akhir EditText Password-->
+
+
+    <!--Awal Button Edit Password-->
+    <Button
+        android:id="@+id/btnpassword"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnedit"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="-5dp"
+        android:layout_marginEnd="30dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/poppins"
+        android:text="EDIT PASSWORD"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <!--Akhir Button Edit Password-->
+
+    <!-- Awal Button Edit -->
+    <Button
+        android:id="@+id/btnedit"
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etAlamat"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/bg_editakun"
+        android:fontFamily="@font/poppins"
+        android:text="PERBARUI"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+    <!-- Akhir Button Edit -->
+
+
+
+</RelativeLayout>

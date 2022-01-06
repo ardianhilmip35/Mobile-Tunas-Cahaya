@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Fitur.DetailKatalogActivity">
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+        <LinearLayout
+            android:id="@+id/isi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/header">
+
+
+            <TextView
+                android:id="@+id/namaimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:fontFamily="@font/poppins"
+                android:gravity="center_horizontal"
+                android:text="Masjid Ar Rahman"
+                android:textColor="@color/blue1"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_below="@id/namaimage"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                    android:id="@+id/tvdeskripsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="330dp"
+                    android:fontFamily="@font/poppins"
+                    android:justificationMode="inter_word"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="30dp"
+                    android:scrollbars="vertical"
+                    android:paddingHorizontal="20dp"
+                    android:layout_below="@id/image"
+                    android:layout_marginHorizontal="45dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/radius_btn"
+                    android:text="TUNAS CAHAYA adalah perusahaan Pelaksanaan konstruksi berbentuk CV. CV.TUNAS CAHAYA beralamat di Jalan Slamet Riyadi RT. 004 RW. 011, Perum Bumi Central Permai Blok C-27, Kelurahan Baratan, Kecamatan Patrang, Kabupaten Jember.
+        CV. TUNAS CAHAYA adalah badan usaha berpengalaman yang mengerjakan proyek nasional."
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/btnpesan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tempdeskripsi"
+                android:layout_marginHorizontal="45dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/radius_btn"
+                android:fontFamily="@font/poppins"
+                android:onClick="onClick"
+                android:text="PESAN SEKARANG"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvkatalog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID Katalog"
+        android:layout_marginTop="60dp"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvpelanggan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID pelanggan"
+        android:layout_below="@+id/tvkatalog"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/tvTanggal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal"
+        android:layout_below="@+id/tvpelanggan"
+        android:visibility="gone"/>
+</RelativeLayout>
