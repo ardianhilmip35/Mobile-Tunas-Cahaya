@@ -1,5 +1,6 @@
 package com.ardianhilmip.tunascahaya.Fitur;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -10,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ardianhilmip.tunascahaya.ApiInterface;
@@ -43,6 +45,9 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.detail_katalog);
 
         sharedPrefManager=new SharedPrefManager(getApplicationContext());
+        tvIdpelanggan = findViewById(R.id.tvpelanggan);
+        String idpelanggan = String.valueOf(sharedPrefManager.getUser().getId_pelanggan());
+        tvIdpelanggan.setText(idpelanggan);
 
 
         btnkembali = findViewById(R.id.btnkembali);
@@ -57,8 +62,7 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
 
         tvId = findViewById(R.id.tvkatalog);
 
-        tvIdpelanggan = findViewById(R.id.tvpelanggan);
-        String idpelanggan = String.valueOf(sharedPrefManager.getUser().getId_pelanggan());
+
 
         tvTanggal = findViewById(R.id.tvTanggal);
         Calendar calendar = Calendar.getInstance();
@@ -84,11 +88,10 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
         tvNama.setText(xNama);
         tvDeskripsi.setText(xDeskripsi);
         Glide.with(DetailKatalogActivity.this).load(BASE_IMG+xGambar).into(tvGambar);
-
+        tvId.setText(xId);
 
         tvTanggal.setText(tanggal);
-        tvId.setText(xId);
-        tvIdpelanggan.setText(idpelanggan);
+
 
        }
 
@@ -109,7 +112,33 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
     }
 
 
+    private void switchOnKatalog() {
+        Intent i=new Intent(DetailKatalogActivity.this, KatalogActivity.class);
+        startActivity(i);
+    }
+
+
     private void pesansekarang() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage("Apakah anda sudah melakukan konsultasi kepada pihak kami?");
+        builder.setNegativeButton("Belum", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                Intent a=new Intent(DetailKatalogActivity.this, KonsulActivity.class);
+                startActivity(a);
+            }
+        });
+        builder.setPositiveButton("Sudah", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+               pemesananproduk();
+            }
+        });
+        builder.show();
+    }
+
+
+    private void pemesananproduk() {
         String Idpelanggan = tvIdpelanggan.getText().toString();
         String Katalog = tvId.getText().toString();
         String Tanggal = tvTanggal.getText().toString();
@@ -122,6 +151,8 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
             public void onResponse(Call<PesanResponse> call, Response<PesanResponse> response) {
                 int kode = response.body().getKode();
                 String pesan = response.body().getPesan();
+                Intent i=new Intent(DetailKatalogActivity.this, PembayaranActivity.class);
+                startActivity(i);
                 Toast.makeText( DetailKatalogActivity.this, "Kode : " + kode + " | Pesan : " + pesan, Toast.LENGTH_SHORT).show();
             }
 
@@ -130,11 +161,5 @@ public class DetailKatalogActivity extends AppCompatActivity implements View.OnC
                 Toast.makeText(DetailKatalogActivity.this, "Gagal Menghubungi Server" + t.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
-    }
-
-
-    private void switchOnKatalog() {
-        Intent i=new Intent(DetailKatalogActivity.this, KatalogActivity.class);
-        startActivity(i);
     }
 }
