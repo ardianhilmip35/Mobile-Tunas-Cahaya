@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ardianhilmip.tunascahaya">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Tunas_Cahaya_Mobile"
+        android:usesCleartextTraffic="true">
+        <!--Layout Home-->
+        <activity android:name=".Activites.HomeActivity"
+            android:exported="false"/>
+
+        <!--Layout About-->
+        <activity android:name=".Fitur.AboutActivity"
+            android:exported="false"/>
+
+        <!--Layout Konsul-->
+        <activity android:name=".Fitur.KonsulActivity"
+            android:exported="false"/>
+
+        <!--Layout Akun-->
+        <activity android:name=".Fitur.AkunActivity"
+            android:exported="false"/>
+
+        <!--Layout Edit Akun-->
+        <activity android:name=".Fitur.EditAkunActivity"
+            android:exported="false"/>
+
+        <!--Layout Register-->
+        <activity android:name=".Activites.RegisterActivity"
+            android:exported="false"/>
+
+        <!--Layout Login-->
+        <activity android:name=".Activites.LoginActivity"
+            android:exported="false">
+        </activity>
+
+        <!--Layout Detail Katalog-->
+        <activity android:name=".Fitur.DetailKatalogActivity"
+            android:exported="false"/>
+
+        <!--Layout Reset Password-->
+        <activity android:name=".Fitur.ResetPassActivity"
+            android:exported="false"/>
+
+        <!--Layout List Pembayaran-->
+        <activity android:name=".Fitur.PembayaranActivity"
+            android:exported="false"/>
+
+        <!--Layout Detail Pembayaran-->
+        <activity android:name=".Fitur.DetailPembayaranActivity"
+            android:exported="false"/>
+
+        <!--Layout Pembayaran Sukses-->
+        <activity android:name=".Fitur.SuksesActivity"
+            android:exported="false"/>
+
+        <!--Layout  Katalog-->
+        <activity android:name=".Fitur.KatalogActivity"
+            android:exported="false"/>
+
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
