@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Fitur.EditAkunActivity">
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+
+    <!--Awal TextView Edit Akun-->
+    <TextView
+        android:id="@+id/txteditakun"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:text="Edit Akun"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Edit Akun-->
+
+
+
+
+    <!--Awal EditText Nama Lengkap-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txteditakun"
+        android:layout_marginHorizontal="30dp"
+        app:startIconDrawable="@drawable/ic_name"
+        android:layout_marginTop="40dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:inputType="text"
+            android:minHeight="48dp"
+            android:hint="Nama Lengkap"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Nama Lengkap-->
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nama"
+        android:layout_marginHorizontal="30dp"
+        app:startIconDrawable="@drawable/ic_email"
+        android:layout_marginTop="30dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+        <!--Awal EditText Email-->
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border"
+            android:fontFamily="@font/ptserif"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:paddingStart="15dp"
+            android:hint="Email"
+            android:textColor="@color/white"
+            android:textSize="18dp" />
+        <!--Akhir EditText Email-->
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <!--Awal EditText Nomer Telepon-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Nohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Email"
+        android:layout_marginHorizontal="30dp"
+        app:startIconDrawable="@drawable/ic_phone"
+        android:layout_marginTop="30dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+    <EditText
+        android:id="@+id/etNohp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/ptserif"
+        android:inputType="phone"
+        android:hint="Nomer Telepon"
+        android:minHeight="48dp"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Nomer Telepon-->
+
+
+    <!--Awal EditText Alamat-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/Alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Nohp"
+        android:layout_marginHorizontal="30dp"
+        app:startIconDrawable="@drawable/ic_map"
+        android:layout_marginTop="30dp"
+        app:startIconTint="@color/gray"
+        android:textColorHint="@color/gray">
+    <EditText
+        android:id="@+id/etAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border"
+        android:fontFamily="@font/ptserif"
+        android:inputType="textPostalAddress"
+        android:minHeight="48dp"
+        android:hint="Alamat Lengkap"
+        android:paddingStart="15dp"
+        android:textColor="@color/white"
+        android:textSize="18dp" />
+    </com.google.android.material.textfield.TextInputLayout>
+    <!--Akhir EditText Alamat-->
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Alamat"
+        android:layout_marginTop="40dp">
+        <!-- Awal Button Edit -->
+        <Button
+            android:id="@+id/btnedit"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/bg_editakun"
+            android:fontFamily="@font/poppins"
+            android:text="PERBARUI"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+        <!-- Akhir Button Edit -->
+
+        <!--Awal Button Edit Password-->
+        <Button
+            android:id="@+id/btnpassword"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/bg_editakun"
+            android:fontFamily="@font/poppins"
+            android:text="PASSWORD"
+            android:textAllCaps="false"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <!--Akhir Button Edit Password-->
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
