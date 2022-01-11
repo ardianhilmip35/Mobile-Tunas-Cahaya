@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    tools:context=".Fitur.KatalogActivity">
+
+    <!--Awal Button Kembali-->
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/blue1">
+
+        <ImageButton
+            android:id="@+id/btnkembali"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="20dp"
+            android:background="@color/blue1"
+            android:clickable="true"
+            android:paddingEnd="80dp"
+            android:src="@drawable/ic_kembali" />
+
+        <TextView
+            android:id="@+id/txtkembali"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="40dp"
+            android:fontFamily="@font/poppins"
+            android:gravity="center_vertical"
+            android:paddingTop="4dp"
+            android:text="Kembali"
+            android:textColor="@color/white"
+            android:textSize="20dp" />
+    </RelativeLayout>
+    <!--Akhir Button Kembali-->
+
+    <!--Awal TextView Katalog-->
+    <TextView
+        android:id="@+id/txtkatalog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="30dp"
+        android:fontFamily="@font/poppins"
+        android:gravity="center_horizontal"
+        android:text="Katalog"
+        android:textColor="@color/blue1"
+        android:textSize="30dp"
+        android:textStyle="bold" />
+    <!--Akhir TextView Katalog-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtkatalog">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--Awal Tampilan Kategori Masjid-->
+            <TextView
+                android:id="@+id/temibadah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/poppins"
+                android:text="Kategori Tempat Ibadah"
+                android:textColor="@color/blue1"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:layout_marginTop="9dp"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/kattemibadah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/temibadah"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                tools:listitem="@layout/item_list" />
+
+            <!--Akhir Tampilan Kategori Masjid-->
+
+            <!--Awal Tampilan Kategori Sekolah-->
+
+            <TextView
+                android:id="@+id/Sekolah"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/kattemibadah"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/poppins"
+                android:text="Kategori Sekolah"
+                android:textColor="@color/blue1"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/katsekolah"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Sekolah"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_list" />
+            <!--Akhir Tampilan Kategori Sekolah-->
+
+            <!--Awal Tampilan Kategori Perum-->
+            <TextView
+                android:id="@+id/Mall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/katsekolah"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="9dp"
+                android:fontFamily="@font/poppins"
+                android:text="Kategori Mall"
+                android:textColor="@color/blue1"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/katmall"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Mall"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                tools:listitem="@layout/item_pembayaran" />
+            <!--Akhir Tampilan Kategori Perum-->
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
